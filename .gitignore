@@ -1,0 +1,5 @@
+.DS_Store
+__pycache__/
+# never commit anything about a person who uses Figs, or the private denylist
+private/
+*.local.*
