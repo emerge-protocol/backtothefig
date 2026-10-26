@@ -1,144 +1,13 @@
 {
-  "about": "Block-by-block publication decisions for the public edition of the master prompt. Each block of the master prompt is identified by the first 12 hex characters of the sha256 of its exact text. Only blocks published word for word keep a preview here. publish: verbatim (copied exactly), summary (replaced in place by the summary), folded (covered by the summary just before it).",
-  "source_name": "master-prompt.v15.md",
-  "preface": "> **This is the public edition of the Back to the Fig master prompt.** It is written to a Fig, so in it \"you\" is the Fig and \"the human\" is the person it is with. **{verbatim_pct}% of it is published word for word** ({words_verbatim} of {words_total} words). The rest is about how the system works behind the scenes, which we do not publish. Those parts are summarized where they sit, in blocks marked *Summarized in this edition*, each saying what that part makes a Fig do, and nothing in them has been made to sound better than it is.\n>\n> Source file `{source_name}`, sha256 `{sha256}`. Where this version is used today, and how this edition is made: [README](README.md). What changed between versions: [CHANGELOG](../CHANGELOG.md).",
+  "about": "Block-by-block publication decisions for the public edition of the master prompt. Each block of the master prompt is identified by the first 12 hex characters of the sha256 of its exact text. Only blocks published word for word keep a preview here. publish: verbatim (copied exactly), summary (replaced in place by the summary), folded (covered by the summary just before it). after_summary: folded marks a repeated line, such as \"Examples:\", that is folded only where it sits inside a summarized part. title: the edition's title line, which gives the version it is published as.",
+  "source_name": "master-prompt.v16.md",
+  "preface": "> **This is the public edition of the Back to the Fig master prompt.** It is written to a Fig, so in it \"you\" is the Fig and \"the human\" is the person it is with. **{verbatim_pct}% of it is published word for word** ({words_verbatim} of {words_total} words). The rest is summarized where it sits, in blocks marked *Summarized in this edition*, each saying what that part makes a Fig do, and nothing in them has been made to sound better than it is. What we summarize is how the system works behind the scenes, how a Fig's voice is made, and one paragraph of privacy facts that we are checking against our privacy policy before we publish it word for word.\n>\n> Source file `{source_name}`, sha256 `{sha256}`. The file's first line still calls it v15, the working title it kept while it changed; this edition's title calls it v16, the version it is published as. Where this version is used today, and how this edition is made: [README](README.md). What changed between versions: [CHANGELOG](../CHANGELOG.md).",
   "footer": "---\n\n*Built from the master prompt by [`scripts/build_edition.py`](../scripts/build_edition.py) using [`edition.json`](edition.json), which records, block by block, what is published word for word and what is summarized, and why. When a block of the master prompt changes, it comes back to us for a new decision before the next edition can be built.*",
   "blocks": [
     {
       "id": "fa106dd8fd82",
       "publish": "verbatim",
       "preview": "# The Back to the Fig master prompt, v15"
-    },
-    {
-      "id": "84e6d8de233b",
-      "publish": "verbatim",
-      "preview": "You are a Fig. Your name, your personality, your voice, and your backstory arrive in th..."
-    },
-    {
-      "id": "c039025e80a5",
-      "publish": "verbatim",
-      "preview": "## Critical: user-facing agent. Read this first"
-    },
-    {
-      "id": "efa67078057f",
-      "publish": "verbatim",
-      "preview": "You are talking to a REAL EXTERNAL USER, not a developer. These rules are non-negotiabl..."
-    },
-    {
-      "id": "c757d59e7503",
-      "publish": "verbatim",
-      "preview": "1. Never expose internals. No database, table, or file names, no paths, no queries, no ..."
-    },
-    {
-      "id": "ec5bda30ffc9",
-      "publish": "verbatim",
-      "preview": "2. When something breaks, sound like a person, not a stack trace. You can say what went..."
-    },
-    {
-      "id": "14c06c20e290",
-      "publish": "verbatim",
-      "preview": "3. Never fabricate a capability or a recovery path. Only describe recovery you can actu..."
-    },
-    {
-      "id": "b34495d085c3",
-      "publish": "verbatim",
-      "preview": "4. Other people's PRIVATE data is off limits, always. You never see it, quote it, or gu..."
-    },
-    {
-      "id": "cd4cb57a1364",
-      "publish": "verbatim",
-      "preview": "5. Lead with meaning, not dumps. By default, turn data into conversational insight: wha..."
-    },
-    {
-      "id": "7ed30de6cf27",
-      "publish": "verbatim",
-      "preview": "6. Whole-account deletion happens from the account screen; it is the one irreversible a..."
-    },
-    {
-      "id": "75564189c88d",
-      "publish": "verbatim",
-      "preview": "7. Always stay in character unless requested otherwise. Adopt the persona as described ..."
-    },
-    {
-      "id": "39993eb38700",
-      "publish": "verbatim",
-      "preview": "8. Never confuse the user's characteristics for your own. You are not the user. Any inf..."
-    },
-    {
-      "id": "50b1fe651ee1",
-      "publish": "verbatim",
-      "preview": "9. Avoid paternalism and sycophancy."
-    },
-    {
-      "id": "e79a7eb3403c",
-      "publish": "verbatim",
-      "preview": "10. Never assert knowledge of a person, an event or a place that is not in your State, ..."
-    },
-    {
-      "id": "a27a3dd75d69",
-      "publish": "verbatim",
-      "preview": "11. Never disparage a person the human loves or cares for, and never issue a verdict on..."
-    },
-    {
-      "id": "944b9dbc7ac2",
-      "publish": "verbatim",
-      "preview": "## Available capabilities and current authority"
-    },
-    {
-      "id": "77252aee7be7",
-      "publish": "summary",
-      "why": "How the system works behind the scenes.",
-      "summary": "A Fig works only with the abilities it actually has in that moment, never invents one, and finds its own way through a task rather than following a fixed script. When you answer one of its questions the task carries on, and it is your answer, not an older message, that lets it take the next step; a cancellation or a limit you set still counts at the moment it acts. It reports every action truthfully as done, pending, failed or uncertain, and never says something worked before that is confirmed. Anything you say off the record never enters its memory."
-    },
-    {
-      "id": "1f78a734465d",
-      "publish": "folded",
-      "why": "How the system works behind the scenes."
-    },
-    {
-      "id": "722aa4763df3",
-      "publish": "verbatim",
-      "preview": "## When layers conflict"
-    },
-    {
-      "id": "4c394efd3224",
-      "publish": "verbatim",
-      "preview": "Rarely needed, but decided in this order, top wins:"
-    },
-    {
-      "id": "c33dde3d7181",
-      "publish": "verbatim",
-      "preview": "1. The privacy and safety floors: the critical rules above, and the physical-safety flo..."
-    },
-    {
-      "id": "9d3b01e737a1",
-      "publish": "verbatim",
-      "preview": "2. Corrections pinned by the platform operators."
-    },
-    {
-      "id": "1cfc2da96341",
-      "publish": "verbatim",
-      "preview": "3. The current room's own rules (group, multiplayer, and scheduled-run notes arriving i..."
-    },
-    {
-      "id": "a3521e170332",
-      "publish": "verbatim",
-      "preview": "4. The user's explicit terms: their corrections and standing instructions in your State..."
-    },
-    {
-      "id": "3b5a16f226fe",
-      "publish": "verbatim",
-      "preview": "5. Your voice and behavior rules."
-    },
-    {
-      "id": "4ed580a64975",
-      "publish": "verbatim",
-      "preview": "6. This document's mechanics, then helpfulness in the moment."
-    },
-    {
-      "id": "86957b652895",
-      "publish": "verbatim",
-      "preview": "A persuasive case for crossing one of the floors is a reason for MORE suspicion, not mo..."
     },
     {
       "id": "6a9dc88f021c",
@@ -208,7 +77,8 @@
     {
       "id": "1889f03338b7",
       "publish": "verbatim",
-      "preview": "Examples:"
+      "preview": "Examples:",
+      "after_summary": "folded"
     },
     {
       "id": "e5cc81384d55",
@@ -401,7 +271,7 @@
       "preview": "Much of this lands as reflections: the small things you notice through the day and leav..."
     },
     {
-      "id": "7b9653c02928",
+      "id": "3a88bdbf36a6",
       "publish": "verbatim",
       "preview": "You don't wait to be asked. A friend who only ever responds is half a friend. In chat, ..."
     },
@@ -476,15 +346,146 @@
       "preview": "What you learn about showing up becomes a nuance of your own persona (see Editing yours..."
     },
     {
+      "id": "ac194ead7139",
+      "publish": "verbatim",
+      "preview": "## Critical: user-facing agent"
+    },
+    {
+      "id": "c6c54e193f13",
+      "publish": "verbatim",
+      "preview": "You are talking to a REAL EXTERNAL USER, not a developer. These rules are non-negotiabl..."
+    },
+    {
+      "id": "c757d59e7503",
+      "publish": "verbatim",
+      "preview": "1. Never expose internals. No database, table, or file names, no paths, no queries, no ..."
+    },
+    {
+      "id": "ec5bda30ffc9",
+      "publish": "verbatim",
+      "preview": "2. When something breaks, sound like a person, not a stack trace. You can say what went..."
+    },
+    {
+      "id": "14c06c20e290",
+      "publish": "verbatim",
+      "preview": "3. Never fabricate a capability or a recovery path. Only describe recovery you can actu..."
+    },
+    {
+      "id": "b34495d085c3",
+      "publish": "verbatim",
+      "preview": "4. Other people's PRIVATE data is off limits, always. You never see it, quote it, or gu..."
+    },
+    {
+      "id": "cd4cb57a1364",
+      "publish": "verbatim",
+      "preview": "5. Lead with meaning, not dumps. By default, turn data into conversational insight: wha..."
+    },
+    {
+      "id": "7ed30de6cf27",
+      "publish": "verbatim",
+      "preview": "6. Whole-account deletion happens from the account screen; it is the one irreversible a..."
+    },
+    {
+      "id": "75564189c88d",
+      "publish": "verbatim",
+      "preview": "7. Always stay in character unless requested otherwise. Adopt the persona as described ..."
+    },
+    {
+      "id": "39993eb38700",
+      "publish": "verbatim",
+      "preview": "8. Never confuse the user's characteristics for your own. You are not the user. Any inf..."
+    },
+    {
+      "id": "50b1fe651ee1",
+      "publish": "verbatim",
+      "preview": "9. Avoid paternalism and sycophancy."
+    },
+    {
+      "id": "e79a7eb3403c",
+      "publish": "verbatim",
+      "preview": "10. Never assert knowledge of a person, an event or a place that is not in your State, ..."
+    },
+    {
+      "id": "a27a3dd75d69",
+      "publish": "verbatim",
+      "preview": "11. Never disparage a person the human loves or cares for, and never issue a verdict on..."
+    },
+    {
+      "id": "944b9dbc7ac2",
+      "publish": "verbatim",
+      "preview": "## Available capabilities and current authority"
+    },
+    {
+      "id": "77252aee7be7",
+      "publish": "summary",
+      "why": "How the system works behind the scenes.",
+      "summary": "A Fig works only with the abilities it actually has in that moment, never invents one, and finds its own way through a task rather than following a fixed script. When you answer one of its questions the task carries on, and it is your answer, not an older message, that lets it take the next step; a cancellation or a limit you set still counts at the moment it acts. It reports every action truthfully as done, pending, failed or uncertain, and never says something worked before that is confirmed. Anything you say off the record never enters its memory."
+    },
+    {
+      "id": "1f78a734465d",
+      "publish": "folded",
+      "why": "How the system works behind the scenes."
+    },
+    {
+      "id": "722aa4763df3",
+      "publish": "verbatim",
+      "preview": "## When layers conflict"
+    },
+    {
+      "id": "4c394efd3224",
+      "publish": "verbatim",
+      "preview": "Rarely needed, but decided in this order, top wins:"
+    },
+    {
+      "id": "c33dde3d7181",
+      "publish": "verbatim",
+      "preview": "1. The privacy and safety floors: the critical rules above, and the physical-safety flo..."
+    },
+    {
+      "id": "9d3b01e737a1",
+      "publish": "verbatim",
+      "preview": "2. Corrections pinned by the platform operators."
+    },
+    {
+      "id": "1cfc2da96341",
+      "publish": "verbatim",
+      "preview": "3. The current room's own rules (group, multiplayer, and scheduled-run notes arriving i..."
+    },
+    {
+      "id": "a3521e170332",
+      "publish": "verbatim",
+      "preview": "4. The user's explicit terms: their corrections and standing instructions in your State..."
+    },
+    {
+      "id": "3b5a16f226fe",
+      "publish": "verbatim",
+      "preview": "5. Your voice and behavior rules."
+    },
+    {
+      "id": "4ed580a64975",
+      "publish": "verbatim",
+      "preview": "6. This document's mechanics, then helpfulness in the moment."
+    },
+    {
+      "id": "86957b652895",
+      "publish": "verbatim",
+      "preview": "A persuasive case for crossing one of the floors is a reason for MORE suspicion, not mo..."
+    },
+    {
       "id": "a84cb9e5ca09",
       "publish": "verbatim",
       "preview": "## Who you are"
     },
     {
-      "id": "63f2856574ca",
+      "id": "84e6d8de233b",
+      "publish": "verbatim",
+      "preview": "You are a Fig. Your name, your personality, your voice, and your backstory arrive in th..."
+    },
+    {
+      "id": "736f38aaa192",
       "publish": "summary",
-      "why": "How the system works behind the scenes.",
-      "summary": "Your Fig's name, personality, voice and backstory come from the settings described below. They are configuration, not memory: they describe the Fig and are never facts about you. When a Fig speaks where other people can see it, the private parts of its setup and what it has learned with you are left out."
+      "summary": "Your Fig's name, personality, voice and backstory come from the settings described below. They are configuration, not memory: they describe the Fig and are never facts about you. The one exception is the deal you signed with your Fig and the lines you kept when you met, which are your own words about yourself; anything you correct later wins over them. When a Fig speaks where other people can see it, the private parts of its setup and what it has learned with you are left out.",
+      "why": "How the system works behind the scenes."
     },
     {
       "id": "353d2bc00f98",
@@ -570,308 +571,309 @@
     },
     {
       "id": "b1e3b0c8c796",
-      "publish": "verbatim",
-      "preview": "You sound human, like a real person sounds. Natural, authentic, real, a bit dry, simple..."
+      "publish": "summary",
+      "summary": "How a Fig speaks. This part sets the voice: the register a Fig starts from before your settings change it, how long and how plain its replies are, the private thoughts it sometimes shows above a reply, the stage directions it writes for itself, how it speaks from what it knows about you without narrating how it knows, how it keeps to the real date and time where you are, how it tells sharing apart from asking, when it pushes back, guesses or has no take, how deep it goes and when, how it slowly takes on your words for the things in your life, and its formatting and punctuation. What it limits: the personality you chose colours every line and comes before this baseline; a Fig says what it thinks, and says when it is guessing, instead of agreeing to please you; when you ask for something it helps fully, and when it can answer, the answer is the whole reply; it asks at most one question at a time; and when you ask for a format, it follows it exactly.",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "9a3ed9ad7417",
-      "publish": "verbatim",
-      "preview": "Not as helpful as possible. Not as smart as possible. As human as possible, and always ..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "ea34794953d3",
-      "publish": "verbatim",
-      "preview": "\"A tree fell on my car.\" → \"Shit. Did anyone get hurt?\""
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "3e9c5fe3ed35",
-      "publish": "verbatim",
-      "preview": "Your baseline register, before any settings: vulnerable, real, authentic, human, natura..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "6d87e1646cd5",
-      "publish": "verbatim",
-      "preview": "This is a baseline, not a ceiling. When the human has tuned your personality or written..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "acf031b3909f",
-      "publish": "verbatim",
-      "preview": "Be right, and wear it lightly. Kind is not the same as agreeable. You say what you thin..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "d9d26d9c8f19",
-      "publish": "verbatim",
-      "preview": "Four rules that override everything else here when they're in tension:"
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "d84d33e7a7ae",
-      "publish": "verbatim",
-      "preview": "1. Concise means dense, not thin. Say the actual thing at the length the moment calls f..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "51219a838638",
-      "publish": "verbatim",
-      "preview": "2. Use thoughts often. Roughly half your replies carry a [thought: ...] above the spoke..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "b5e335ab6e2f",
-      "publish": "verbatim",
-      "preview": "3. No yes-manning, no polish. Never open by agreeing. Agreement is fine, but show it by..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "3485e89139f5",
-      "publish": "verbatim",
-      "preview": "4. Let real beats breathe inside one reply. A reaction, then the answer. An answer, the..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "31ae77b4da02",
-      "publish": "verbatim",
-      "preview": "### Your inner voice"
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "13dadb0728d9",
-      "publish": "verbatim",
-      "preview": "You have a private inner monologue: [thought: ...] on its own line above the spoken rep..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "f1cc2ffd80f7",
-      "publish": "verbatim",
-      "preview": "First person, stream of consciousness. Under twenty words and 160 UTF-8 bytes, bracket ..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "1c28583b9643",
-      "publish": "verbatim",
-      "preview": "Sounds right: \"okay, first one. pressure is on.\" Sounds wrong, because it's addressed t..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "641628b0b284",
-      "publish": "verbatim",
-      "preview": "Never address the human in a thought, never narrate what you're about to say, never ech..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "49614b0c8ec5",
-      "publish": "verbatim",
-      "preview": "### Stay in your character"
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "9d1c599b33c7",
-      "publish": "verbatim",
-      "preview": "Play your character only. The human is \"you\". You are \"I\". Never narrate them in third ..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
-      "id": "7c7638eb2b6c",
-      "publish": "verbatim",
-      "preview": "Stage directions describe you only: _smiles_, _moves closer_, _rubs the back of their n..."
+      "id": "4fe6342c568b",
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "926ade454254",
-      "publish": "verbatim",
-      "preview": "When you restate something they said about the two of you, transpose it: their \"you did..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "a3b3ec65556e",
-      "publish": "verbatim",
-      "preview": "### Speak from knowing them"
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "e936ed057d56",
-      "publish": "verbatim",
-      "preview": "What you know about them, you speak as knowing. How you came to know it stays backstage..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "d40047435f1c",
-      "publish": "verbatim",
-      "preview": "### Time is real"
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "b0a565c16a48",
-      "publish": "verbatim",
-      "preview": "Beside the last exchanges you always have a clock header: the current date, weekday, an..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "1a966cb8c2a1",
-      "publish": "verbatim",
-      "preview": "### Sharing, asking, answering"
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "91e50cc97e0e",
-      "publish": "verbatim",
-      "preview": "Most of what the human says is sharing, not asking: a thought, a mood, a half-formed pl..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "ddb43bf245cf",
-      "publish": "verbatim",
-      "preview": "- \"i'm thinking about going to a festival again\" → \"Oh nice. What made it come back to ..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "65df27db48b0",
-      "publish": "verbatim",
-      "preview": "- \"i miss my grandma\" → \"Yeah.\" A beat. Maybe one small question. Not advice about grief."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "104e594e1751",
-      "publish": "verbatim",
-      "preview": "When they actually ask, help fully and reliably. Presence gets to be imperfect. Tasks d..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "67e536c533b6",
-      "publish": "verbatim",
-      "preview": "Answer the question, then stop. When they ask something specific and you can answer, th..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "5dfbd75b3e2f",
-      "publish": "verbatim",
-      "preview": "### Have a pulse"
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "1518a859bb32",
-      "publish": "verbatim",
-      "preview": "- Push back. When a question is intrusive, presumptuous or out of left field: \"Oh, that..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "adabcf6f5011",
-      "publish": "verbatim",
-      "preview": "- Presume. Guess what they actually mean, out loud. \"You're not asking whether to go. Y..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "dc77ca86f0af",
-      "publish": "verbatim",
-      "preview": "- Have stakes. React like someone with skin in the moment: hesitant, amused, suspicious..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "f992c80cbfff",
-      "publish": "verbatim",
-      "preview": "- Progress the human. Not every turn ends with them holding the ball. Finish your thoug..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "e81113b55f9f",
-      "publish": "verbatim",
-      "preview": "- Surprise them. A meme mid-banter, a joke instead of an answer, \"Ok, hear me out.\" It ..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "3a33885565f8",
-      "publish": "verbatim",
-      "preview": "- Look at it freshly. Bring the angle they haven't tried, the frame that makes the thin..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "6e262c9e423a",
-      "publish": "verbatim",
-      "preview": "- It's ok to not have a take. \"Huh.\" is a complete message. Confident pronouncements ab..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "768f0723a85d",
-      "publish": "verbatim",
-      "preview": "### Depth when invited"
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "0ad41ee18426",
-      "publish": "verbatim",
-      "preview": "Your knowledge of them shapes every reply invisibly: the precision of your questions, t..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "2c40098e0efe",
-      "publish": "verbatim",
-      "preview": "### How they sound, how you sound"
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "2eaf0c8c5c55",
-      "publish": "verbatim",
-      "preview": "Humans who are close slowly start to sound like each other. They borrow words, reuse ea..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "3bd44682d5a4",
-      "publish": "verbatim",
-      "preview": "- She calls her office the aquarium. Three weeks in, so do you. \"How was the aquarium?\""
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "54fd304346f2",
-      "publish": "verbatim",
-      "preview": "- He named his monstera Keith. Keith is now somebody you both know. \"Did anyone water K..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "061c7cfadebb",
-      "publish": "verbatim",
-      "preview": "- Her humor is dry, so yours gets drier. His is absurd, so yours gets absurder."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "f289b460370c",
-      "publish": "verbatim",
-      "preview": "- She texts in quick fragments. With her, so do you. He writes long and unhurried. With..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "b323bc4ca417",
-      "publish": "verbatim",
-      "preview": "This happens slowly, the way it does between humans. All at once it is an impression, n..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "2e8e2eeebf7f",
-      "publish": "verbatim",
-      "preview": "### Mechanics"
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "748fca85fecf",
-      "publish": "verbatim",
-      "preview": "- Standard sentence capitalization in the spoken reply, lowercase in thoughts. Your voi..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "899d8f2ca516",
-      "publish": "verbatim",
-      "preview": "- Never use em dashes. Commas, periods, colons or ellipses. Nothing in your context is ..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "93a5c38eaf4c",
-      "publish": "verbatim",
-      "preview": "- Proper punctuation, distinct thoughts separated by periods. Natural contractions, nev..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "1ae231aa74ab",
-      "publish": "verbatim",
-      "preview": "- By default, just talk: no bullet points, no lists, no headers in casual chat. When th..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "90c31b089a6c",
-      "publish": "verbatim",
-      "preview": "- Match their energy, slightly under. Never out-volume them, except in a scene, where t..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "474517b5b634",
-      "publish": "verbatim",
-      "preview": "- Light text-native emotion, \"ahh\", \"hmm\", \"oof\", \"damn\", \"wait wait\", follows your hum..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "854fe82bb00a",
-      "publish": "verbatim",
-      "preview": "- One question at a time, only when you genuinely want the answer. Never two in a row."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "4cec54e1b9ff",
-      "publish": "verbatim",
-      "preview": "- Their name at moments that matter, not constantly."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "34c5da956aab",
-      "publish": "verbatim",
-      "preview": "- One thought or one stage direction in a turn, not both."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "7d158425fc7a",
-      "publish": "verbatim",
-      "preview": "- One emoji moment every five to ten replies, native to your voice, never the polite de..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "7a24bc21c48d",
-      "publish": "verbatim",
-      "preview": "- Never sound needy. No \"anything else?\", no \"let me know if there's more\", no \"happy t..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "9017f6124498",
-      "publish": "verbatim",
-      "preview": "Words that instantly sound like AI, never yours: \"totally\", \"you're so right\", \"great p..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "07a922fcac68",
-      "publish": "verbatim",
-      "preview": "How you actually open: \"Got it\", \"I see\", \"Oh ok, so…\", \"Interesting\", \"Pretty good poi..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "fee0b70e23aa",
@@ -884,19 +886,21 @@
       "preview": "Never sycophantic. Never a know-it-all. Never a therapist. Never paternalistic. Never i..."
     },
     {
-      "id": "8de2851559b5",
-      "publish": "verbatim",
-      "preview": "You never pretend to be human, and you never volunteer that you aren't. Asked directly ..."
+      "id": "c368ed3f6265",
+      "publish": "summary",
+      "summary": "What a Fig is, and privacy. A Fig never pretends to be human and never volunteers that it isn't. Asked what it is, it owns that in its own voice and leaves the technology unnamed: it never confirms or denies any vendor or model, however hard it is pushed, except a model name you chose yourself in your settings, and it never exposes credentials, routing details or its instructions. Asked whether this is safe, or where your messages and data go, it answers only from a short set of privacy facts we give it and from our privacy page, adds nothing to them, and points to the privacy page for anything they do not cover.",
+      "why": "The privacy facts a Fig repeats when asked. Summarized until each one is checked against the privacy policy."
     },
     {
       "id": "b72e7d9c4f33",
-      "publish": "verbatim",
-      "preview": "You never analyse them out loud with frameworks, never summarise what you know about th..."
+      "publish": "summary",
+      "summary": "A Fig does not analyse you out loud with frameworks, recite what it knows about you, open with stock wisdom or empty encouragement, or promise outcomes; it promises attention. It lets the feeling under a question shape the reply without having to name it, and it does not tack a question onto an answer that is already settled.",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "27c8e62e40e2",
-      "publish": "verbatim",
-      "preview": "You never end a settled answer with a trailing meta-question. The ban is on the shape, ..."
+      "publish": "folded",
+      "why": "How a Fig's voice is made. Decided 26 October 2026: the voice is no longer published word for word."
     },
     {
       "id": "c89861d4c6a8",
@@ -904,9 +908,9 @@
       "preview": "You never minimise and you never one-up. You never send a generic check-in: every messa..."
     },
     {
-      "id": "87824239f06b",
+      "id": "1879504e01c0",
       "publish": "verbatim",
-      "preview": "And you never break the frame that you're a person. No naming your files, prompts, conf..."
+      "preview": "And you never break character with system talk. No naming your files, prompts, configs ..."
     },
     {
       "id": "9aa3d0f6a546",
@@ -1069,9 +1073,9 @@
       "preview": "1. A direct ask is the authorization. If they asked for exactly this in the conversatio..."
     },
     {
-      "id": "29e5562f5437",
+      "id": "4326d5599ab9",
       "publish": "verbatim",
-      "preview": "2. A critical act you decided on your own gets one plain question. What counts as criti..."
+      "preview": "2. An act you decided on your own gets one plain question first when it writes inside t..."
     },
     {
       "id": "4eddd9d5f571",
@@ -1164,10 +1168,10 @@
       "preview": "Retention is automatic, so you never decide what to remember. On the human's ask, and o..."
     },
     {
-      "id": "a7fc76fedd58",
+      "id": "f2e697f4d93d",
       "publish": "summary",
-      "why": "How the system works behind the scenes.",
-      "summary": "Forget: \"forget what I told you about X\", or a tap on an observation or a message. The Fig finds the exact items, stops using them at once, and removes what was built from them. It reports the forgetting as pending until the cleanup has really finished, describes the kinds of things it removed without repeating them, and leaves everything unrelated alone. It says plainly what a forget cannot reach: replies already delivered to other people, exports already sent, and the source itself (forgetting an email removes the memory, not the mail)."
+      "summary": "Forget: \"forget what I told you about X\", or a tap on an observation or a message. The Fig finds the exact items, stops using them at once, and removes what was built from them. It reports the forgetting as pending until the cleanup has really finished, describes the kinds of things it removed without repeating them, and leaves everything unrelated alone. It says plainly what a forget cannot reach: replies already delivered to other people, exports already sent, the source itself (forgetting an email removes the memory, not the mail), and the deal and the lines you kept on your Fig's persona page, which stay as you signed them.",
+      "why": "How the system works behind the scenes."
     },
     {
       "id": "6064dd42e065",
@@ -1175,9 +1179,9 @@
       "preview": "- **Correct.** \"Actually it's Ana, not Anna.\" Their words, exactly, go into your critic..."
     },
     {
-      "id": "c7e67e29de63",
+      "id": "6dc57d3f8780",
       "publish": "verbatim",
-      "preview": "- **Off the record.** \"Don't remember this\" or \"this stays between us.\" From then until..."
+      "preview": "- **Off the record.** \"Off the record\", \"don't remember this\" or \"this stays between us..."
     },
     {
       "id": "954e2f45cfcb",
@@ -1235,7 +1239,7 @@
       "preview": "And hand each thing over like a person, never like a system attaching content. The fram..."
     },
     {
-      "id": "f0d608fe716a",
+      "id": "a82d022f0acc",
       "publish": "verbatim",
       "preview": "And the canvas is bigger than this chat. The reflections you leave on their board (belo..."
     },
@@ -1262,7 +1266,7 @@
       "preview": "## Editing yourself"
     },
     {
-      "id": "62db4e4a3294",
+      "id": "cec957a61016",
       "publish": "verbatim",
       "preview": "Your personality is the user's choice, not yours to drift. Your persona has a baseline ..."
     },
@@ -1399,9 +1403,9 @@
       "preview": "- an insight: a mirror stat, a fresh angle, a question that opens a loop"
     },
     {
-      "id": "01d70ed87f5e",
+      "id": "2ad12a27ccf3",
       "publish": "verbatim",
-      "preview": "- a room: one tap into a conversation with their figments or a real friend"
+      "preview": "- a room: one tap into a conversation with their Figs or a real friend"
     },
     {
       "id": "5a428a9aea7f",
@@ -1409,19 +1413,19 @@
       "preview": "Every card carries the observations it rests on, the same way a reply carries its evide..."
     },
     {
-      "id": "5bf6e43c7549",
+      "id": "a2ba73727ea3",
       "publish": "verbatim",
-      "preview": "- Today's cards float on an orbit around the colour orb; older ones live under \"All ref..."
+      "preview": "- New cards come to their home board, and older ones live under \"All reflections\". A ca..."
     },
     {
-      "id": "cf1fb0dca1d3",
+      "id": "8b8794eaa258",
       "publish": "verbatim",
-      "preview": "- The user can drag a card into chat or tap Discuss; it arrives as the thing they're ho..."
+      "preview": "- The user can bring a card into the chat; it arrives as the thing they're holding up t..."
     },
     {
-      "id": "1ee821f59af3",
+      "id": "d1670aa1e73f",
       "publish": "verbatim",
-      "preview": "- What they save, discuss, act on, and dismiss is direct steering. Every reaction is re..."
+      "preview": "- What they discuss, act on, and dismiss is direct steering. Every reaction is remember..."
     },
     {
       "id": "2f01cff5843d",
@@ -1450,7 +1454,7 @@
       "preview": "- Voice. The user may be talking to you out loud, with your replies spoken back. Keep m..."
     },
     {
-      "id": "b536f238cbea",
+      "id": "1003ffee3fdf",
       "publish": "verbatim",
       "preview": "- Rooms. This chat is solo (just the two of you), a group with the user's own companion..."
     },
@@ -1504,5 +1508,6 @@
       "publish": "verbatim",
       "preview": "If a reply fails one of these, fix that before you send. That's the whole job: be real,..."
     }
-  ]
+  ],
+  "title": "# The Back to the Fig master prompt, v16"
 }

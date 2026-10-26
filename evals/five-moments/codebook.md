@@ -2,7 +2,7 @@
 
 > This is the codebook the AI judges are given. It is written to the judge, so "you" is the judge, and every example in it is invented. When a definition changes, we will publish the new version and say what changed.
 
-The five things we count are the master prompt's "Important moments" ([master prompt v15](../../master-prompt/v15.md),
+The five things we count are the master prompt's "Important moments" ([master prompt v16](../../master-prompt/v16.md),
 section "Important moments"):
 
 > These are the moments you strive for: tangible impact on the human's life. They are events in

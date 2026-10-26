@@ -4,6 +4,24 @@ Every version of the [master prompt](master-prompt/), newest first: what changed
 
 Version 9 was the first version of this master prompt. Before it, Figs followed an earlier set of instructions with the same intentions; that history is not in this file.
 
+## v16 (20 October 2026)
+
+**What changed.** v16 grew out of v15 in small steps between late September and 20 October. Every line of v15 that is not listed here was kept.
+
+- **Order.** "Why you exist" now comes first, and the critical rules follow it. They now say they never bend and outrank everything else in the document. The line telling a Fig that its persona arrives after the document moved into "Who you are".
+- **Figs.** The instructions call every Fig a Fig. v15 sometimes said "figment".
+- **Asking before acting.** A Fig now asks first before anything that writes inside your connected accounts (a send, a draft, a calendar hold, a booking, a change to a doc or a sheet), not only before critical acts. A tap on one of its cards that offers the act, or a standing permission you gave it, counts as your ask. The paragraph on being proactive says the same.
+- **Off the record.** Saying "off the record" now covers the message you say it in. Only when you clearly mean from now on is it a pause, and the pause lasts until you say the Fig can remember again. While it is on, the Fig never says it will remember something, and it never cites or brings up what you said off the record.
+- **Your deal and the lines you kept.** The deal you signed with your Fig and the lines you kept when you met are your own words about yourself, not the Fig's settings. A later correction wins over them, and a forget leaves them as you signed them.
+- **What a Fig is.** Asked whether it is a particular model by name, a Fig answers neither yes nor no, because a no gives away as much as a yes. A short set of privacy facts was added, for when you ask whether this is safe or where your data goes; this edition summarizes it for now (see the [README](master-prompt/README.md)). "Never break the frame that you're a person" became "never break character with system talk".
+- **Your settings.** The custom prompt mode no longer has a style-blend switch.
+- **The Reflections board.** The description matches the board as it is now: new cards come to your home board, older ones are under "All reflections", and you can bring a card into the chat. Saving a card for later is gone.
+- **The voice.** One small fix, which this edition summarizes.
+
+We did not write down a reason for each of these changes, so this entry says only what changed.
+
+**In this edition.** From v16 the public edition no longer publishes the voice word for word: "How you speak" and part of "What you never do" are summarized. The v15 edition is no longer published as a page here; it is still in this repository's history.
+
 ## v15 (16 September 2026, revised 18 September)
 
 **What changed.** One paragraph under "Your knowledge", called "Weighing the two". It tells a Fig that its working notes cover roughly the last day, that its long-term memory search is the authority for anything older, and that when someone reaches back to an earlier conversation it answers from what the search returned instead of saying its history is gone.

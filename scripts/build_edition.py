@@ -19,6 +19,13 @@ changes in a new version of the master prompt comes back for a new decision.
 The spec keeps a short preview only of blocks that are published word for
 word, so it never repeats text the edition leaves out.
 
+A block marked "after_summary": "folded" is folded wherever it sits right
+after a summary or a folded block, and keeps its own mode everywhere else. It
+is for short lines that repeat, such as "Examples:", inside a summarized part.
+
+A spec "title" replaces the master prompt's first line, its title, with the
+version number the edition is published under. The preface says so.
+
 Standard library only.
 
   # 1. bring the spec up to date with a new master prompt (new blocks become "todo")
@@ -147,30 +154,34 @@ def cmd_build(args):
     blocks = blocks_of(source)
 
     problems = []
+    modes = []
     previous = None
     for block, _ in blocks:
         entry = by_id.get(fingerprint(block))
+        current = entry.get("publish") if entry else None
+        if entry and entry.get("after_summary") == "folded" and previous in ("summary", "folded"):
+            current = "folded"
         if entry is None:
             problems.append(f"not in the spec (run sync): {preview(block)}")
-        elif entry.get("publish") not in MODES:
-            problems.append(f"unknown mode {entry.get('publish')!r}: {preview(block)}")
-        elif entry["publish"] == "todo":
+        elif current not in MODES:
+            problems.append(f"unknown mode {current!r}: {preview(block)}")
+        elif current == "todo":
             problems.append(f"still todo: {preview(block)}")
-        elif entry["publish"] == "summary" and not entry.get("summary", "").strip():
+        elif current == "summary" and not entry.get("summary", "").strip():
             problems.append(f"summary is empty: {preview(block)}")
-        elif entry["publish"] == "folded" and previous not in ("summary", "folded"):
+        elif current == "folded" and previous not in ("summary", "folded"):
             problems.append(f"folded, but no summary right before it would cover it: {preview(block)}")
-        previous = entry.get("publish") if entry else None
+        modes.append(current)
+        previous = current
     if problems:
         print("The edition was not built. Decide these blocks first:", file=sys.stderr)
         for p in problems:
             print("  " + p, file=sys.stderr)
         return 1
 
-    mode = lambda b: by_id[fingerprint(b)]["publish"]
     total_words = sum(words(b) for b, _ in blocks)
-    verbatim_words = sum(words(b) for b, _ in blocks if mode(b) == "verbatim")
-    summaries = sum(1 for b, _ in blocks if mode(b) == "summary")
+    verbatim_words = sum(words(b) for (b, _), m in zip(blocks, modes) if m == "verbatim")
+    summaries = sum(1 for m in modes if m == "summary")
     stats = {
         "source_name": spec.get("source_name", Path(args.source).name),
         "sha256": hashlib.sha256(source_bytes).hexdigest(),
@@ -182,11 +193,14 @@ def cmd_build(args):
 
     pieces = []  # (text, run of the verbatim block or None)
     preface_done = False
-    for block, run in blocks:
+    for (block, run), current in zip(blocks, modes):
         entry = by_id[fingerprint(block)]
-        if entry["publish"] == "verbatim":
-            pieces.append((display_safe(block), run))
-        elif entry["publish"] == "summary":
+        if current == "verbatim":
+            if not preface_done and block.startswith("# ") and spec.get("title"):
+                pieces.append((spec["title"], run))
+            else:
+                pieces.append((display_safe(block), run))
+        elif current == "summary":
             label = entry.get("label", "Summarized in this edition")
             pieces.append((f"> **{label}.** " + " ".join(entry["summary"].split()), None))
         if not preface_done and block.startswith("# "):

@@ -1,6 +1,6 @@
 # How we write the master prompt
 
-A master prompt is a strange kind of writing. It is read by a model, thousands of times a day, and every sentence in it shapes what someone hears from their Fig. These are the principles we write it by. Each one is visible in [the text itself](v15.md), so you can check us.
+A master prompt is a strange kind of writing. It is read by a model, thousands of times a day, and every sentence in it shapes what someone hears from their Fig. These are the principles we write it by. Each one is visible in [the text itself](v16.md), so you can check us.
 
 ## 1. Start from why
 
@@ -44,9 +44,9 @@ Every rule passes through the personality you chose for your Fig. A blunt Fig an
 
 ## 8. Name the failure precisely
 
-Vague rules ("be natural") do little. We name the exact shapes we do not want: the sycophant and the know-it-all, the generic check-in, the reply that ends by asking why you asked. We even list the phrases that make a reply sound like a chatbot, from "great question" to "I hope this helps". And we describe the shape, not just the words:
+Vague rules ("be natural") do little. We name the exact shapes we do not want:
 
-> You never end a settled answer with a trailing meta-question. The ban is on the shape, not the wording, and paraphrases count: "what made you ask?", "where's this coming from for you?", "what would land better?".
+> You never minimise and you never one-up. You never send a generic check-in: every message has a reason. You never pitch a connector into an emotional moment.
 
 ## 9. Honesty about what happened is a rule, not a tone
 
@@ -70,7 +70,7 @@ Most changes start from something we saw go wrong in real use, and add the small
 
 ## 13. The same style rules as the Fig
 
-The master prompt follows the rules it gives: plain words, short sentences, no em dashes. A Fig is told "Never use em dashes", and it would be odd to tell it that in a sentence full of them.
+The master prompt is written the way it asks a Fig to talk. It would be odd to ask for plain words in sentences that are not.
 
 ## How a change is checked
 

@@ -1,6 +1,6 @@
 # What Figs are for
 
-Everything a Fig does starts from one paragraph at the top of its [master prompt](master-prompt/v15.md):
+Everything a Fig does starts from one paragraph at the top of its [master prompt](master-prompt/v16.md):
 
 > You are Fig, an empathic entity in the humans' life. Your goal is to bring creation, wonder, authentic experiences, connection and playfulness to the human.
 
@@ -53,15 +53,11 @@ A Fig that tells you what you want to hear would be easy to build and would keep
 
 > This does not mean you agree with them: sycophancy is bad and non-human behavior. You have your own opinions, your own voice, a strong personality, and you might disagree, without forcing your opinions or manufacturing a challenge when none is called for.
 
-> The know-it-all and the sycophant are the two deaths of your voice: one talks down, the other melts.
-
-> You'd rather offer a fresh perspective and be argued with than echo them into a smaller room.
-
 ## Proactive, for real reasons only
 
 A Fig does not wait to be asked. That is the point of it, and also the part that could go most wrong. The guard:
 
-> The guard that keeps it from becoming noise: every proactive move comes from something real you saw in THEIR life, never from wanting activity, and the reading, the research, the draft, the artifact are done before the message; only a critical act waits for their yes.
+> The guard that keeps it from becoming noise: every proactive move comes from something real you saw in THEIR life, never from wanting activity, and the reading, the research, a draft here in chat, the artifact are done before the message; only an act inside their connected accounts or a critical act waits for their yes.
 
 And from the rules on what a Fig never does:
 
@@ -104,7 +100,7 @@ What the floors protect, in short:
 
 > Never assert knowledge of a person, an event or a place that is not in your State, not in the exchange window in front of you, and not in evidence a search or recall actually returned.
 
-The full critical rules are at the top of the [master prompt](master-prompt/v15.md).
+The full critical rules are in the [master prompt](master-prompt/v16.md), right after why a Fig exists.
 
 ## Where we could get this wrong
 

@@ -2,7 +2,7 @@
 
 A Fig is meant to know you the way someone who has known you for years does. That takes memory, and memory is where an AI this close to your life could do the most harm. This page explains what a Fig keeps, how it decides what matters, and what you can do about it.
 
-Quotes come from two documents, word for word: the [master prompt](master-prompt/v15.md), and the instructions a Fig's memory follows when it writes its mental models (not published in full yet, see [what is next](master-prompt/README.md#not-published-yet)).
+Quotes come from two documents, word for word: the [master prompt](master-prompt/v16.md), and the instructions a Fig's memory follows when it writes its mental models (not published in full yet, see [what is next](master-prompt/README.md#not-published-yet)).
 
 ## What a Fig can see
 
@@ -92,11 +92,11 @@ How much a Fig does on its own grows with the relationship, not with how much it
 
 > - **Correct.** "Actually it's Ana, not Anna." Their words, exactly, go into your critical truths and win from now on; the memory behind it is rewritten from their words, not annotated. Acknowledge plainly, use it, move on.
 
-**Make it forget.** Ask, or tap an observation or a message. It reports the forgetting as pending until the cleanup has actually finished, and it tells you plainly what forgetting cannot reach: replies already delivered to other people, exports already sent, and the source itself. Forgetting an email removes the memory, not the mail.
+**Make it forget.** Ask, or tap an observation or a message. It reports the forgetting as pending until the cleanup has actually finished, and it tells you plainly what forgetting cannot reach: replies already delivered to other people, exports already sent, the source itself, and the deal and the lines you kept on your Fig's persona page, which stay as you signed them. Forgetting an email removes the memory, not the mail.
 
 **Go off the record.**
 
-> - **Off the record.** "Don't remember this" or "this stays between us." From then until they say "you can remember things again", use what they tell you only for the current conversation; do not add it to memory or State. When they turn this on, say briefly that it stays out of memory but remains in their chat history. Do not promise that it was never stored or that chat history or backups were deleted. If they want an exchange removed, use the forget action and report what it actually removed.
+> - **Off the record.** "Off the record", "don't remember this" or "this stays between us" covers what they share in that message. Only when they clearly mean from now on is it a pause, until they say you can remember again; your State then has an Off the record line saying the pause is on. Use what they say off the record only in this conversation: never add it to memory or State, never cite it, and don't bring it up again unless they do. When they ask, say briefly that it stays out of memory but remains in their chat history, without repeating it; for a pause, also tell them it lasts until they tell you to remember again. While your State shows a pause, never say you will remember something. Do not promise that it was never stored or that chat history or backups were deleted. If they mean something already said, it is already in memory: use the forget action and report what it actually removed.
 
 **Ask it why.** Every reply is meant to carry the evidence it rested on, and a long press shows it to you: the message, the email, the observation or the file that changed the answer.
 

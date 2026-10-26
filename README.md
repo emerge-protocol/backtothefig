@@ -26,7 +26,7 @@ Figs are in alpha, and so is this repository. Some of it describes things that w
 
 ### Where this master prompt runs
 
-Version 15 is the master prompt of our newest Figs, which a first group of testers uses today. Other Figs still follow an earlier set of instructions with the same intentions but not this text. We will update this page when that changes.
+Version 16 is the master prompt of our newest Figs, which a first group of testers uses today. Other Figs still follow an earlier set of instructions with the same intentions but not this text. We will update this page when that changes.
 
 ## What we publish, and what we keep back
 
@@ -50,7 +50,7 @@ One rule decides it: **we publish what Figs are asked to do and why, never how F
 intentions.md            what Figs are for, and the floors
 master-prompt/
   README.md              how the master prompt works and how this edition is made
-  v15.md                 the public edition of the current master prompt
+  v16.md                 the public edition of the current master prompt
   edition.json           block-by-block publication decisions
   how-we-write-it.md     the principles we write it by
 memory.md                how a Fig learns about you, and how you correct it
